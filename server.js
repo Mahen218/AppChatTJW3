@@ -11,7 +11,8 @@ app.use(express.static('public'));
 
 // Menangani koneksi socket
 io.on('connection', (socket) => {
-  console.log('User terhubung');
+  const userAgent = socket.request.headers['user-agent'];
+  console.log('User terhubung dari perangkat:', userAgent);
 
   // Menangani pesan yang diterima
   socket.on('chat message', (message) => {
@@ -29,6 +30,7 @@ io.on('connection', (socket) => {
 
 // Menjalankan server
 const port = 3000;
-server.listen(port, () => {
-  console.log(`Server berjalan di http://localhost:${port}`);
+const host = '192.168.1.4'; // Menggunakan host universal
+server.listen(port, host, () => {
+  console.log(`Server berjalan di http://${host}:${port}`);
 });
