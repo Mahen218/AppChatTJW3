@@ -1,70 +1,72 @@
-Reset default styles
+/* Reset default styles */
 html, body, ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background-color: #DDE6ED;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    font-size: 50px;
-    text-align: center;
-    margin: 20px 0;
-    color: #526D82;
-  }
-  
-  #messages {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 20px;
-    width: 600px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  #message {
-    display: block;
-    width: 600px;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 16px;
-    border-color: #526D82;
-    border-radius: 10px;
-  }
-  
-  button {
-    display: block;
-    width: 100px;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #526D82;
-    color: #fff;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #27374D;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-  }
-  
-  li:nth-child(even) {
-    background-color: #eaeaea;
-  }
-  
-  li:last-child {
-    margin-bottom: 0;
-  }
-  
+body {
+  background-color: transparent;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px 0;
+  color: #526D82;
+}
+
+#messages {
+  font-family: sans-serif;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 20px;
+  width: 600px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+
+#message {
+  display: block;
+  width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  border-color: #526D82;
+  border-radius: 10px;
+}
+
+button {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #526D82;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27374D;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+li:nth-child(even) {
+  background-color: #eaeaea;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
