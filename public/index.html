@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Aplikasi Chat</title>
+    <title>ChitChat</title>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-      // Menghubungkan socket ke server
       const socket = io();
 
       // Menangani pengiriman pesan
@@ -13,22 +12,28 @@
         const message = messageInput.value;
         messageInput.value = '';
 
-        // Mengirim pesan ke server
-        socket.emit('chat message', message);
+        // Mengirim pesan beserta nama client ke server
+        socket.emit('chat message', { message, name: clientName });
       }
 
       // Menangani pesan yang diterima
-      socket.on('chat message', (message) => {
+      socket.on('chat message', (data) => {
         const messagesList = document.getElementById('messages');
         const newMessage = document.createElement('li');
-        newMessage.textContent = message;
+
+        // Menampilkan nama client di dalam pesan
+        newMessage.textContent = `${data.name}: ${data.message}`;
         messagesList.appendChild(newMessage);
       });
+
+      // Meminta input nama client
+      const clientName = prompt('Masukkan nama Anda:');
+
     </script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>ChatApp</h1>
+    <h1>ChitChat</h1>
 
     <ul id="messages"></ul>
 
@@ -36,3 +41,25 @@
     <button onclick="sendMessage()">Kirim</button>
   </body>
 </html>
+
+// // Menghubungkan socket ke server
+      // const socket = io();
+
+      // // Menangani pengiriman pesan
+      // function sendMessage() {
+      //   const messageInput = document.getElementById('message');
+      //   const message = messageInput.value;
+      //   messageInput.value = '';
+
+      //   // Mengirim pesan ke server
+      //   socket.emit('chat message', message);
+      // }
+
+      // // Menangani pesan yang diterima
+      // socket.on('chat message', (message) => {
+      //   const messagesList = document.getElementById('messages');
+      //   const newMessage = document.createElement('li');
+      //   newMessage.textContent = message;
+      //   messagesList.appendChild(newMessage);
+      // });
+      // Menghubungkan socket ke server

@@ -5,7 +5,8 @@ html, body, ul {
 }
 
 body {
-  background-color: transparent;
+  background-image: url("babyroar.png");
+  background-size: cover;
   font-family: sans-serif;
 }
 
@@ -13,7 +14,7 @@ h1 {
   font-size: 50px;
   text-align: center;
   margin: 20px 0;
-  color: #526D82;
+  color: #ffffff;
 }
 
 #messages {
@@ -45,15 +46,16 @@ button {
   margin: 0 auto;
   padding: 10px;
   font-size: 16px;
-  background-color: #526D82;
-  color: #fff;
-  border: none;
+  background-color: #ffffff;
+  color: #4277ff;
+  font-weight: bold;
+  border-color: #4277ff;
   border-radius: 40px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #27374D;
+  background-color: whitesmoke;
 }
 
 li {
